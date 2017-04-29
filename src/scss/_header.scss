@@ -1,0 +1,56 @@
+// @header
+.navbar,  .navbar-default {
+  height: 35px;
+  min-height: 35px;
+  border: 0;
+  padding: 0;
+  margin:0;
+  .container-fluid {
+    margin-left: 0;
+    background-color: $brown;
+    border-radius: 0;
+    text-align: center;
+    color: $white;
+
+    // toggle button
+    .navbar-header {
+      .navbar-toggle {
+        border: none;
+        .icon-bar {
+          background-color: $white;
+        }
+
+        &:hover {
+          background-color: transparent;
+          .icon-bar:nth-child(1) {
+            @include navbar-toggle-rotate(90deg, 30px);
+          }
+
+          .icon-bar:last-child {
+            @include navbar-toggle-rotate(90deg, -5px);
+          }
+        }
+
+        &:focus { background: transparent; }
+      }
+    }
+
+    // menu
+    .navbar-nav {
+      float: none;
+      text-align: center;
+      li {
+        float: none;
+        display: inline-block;
+        height: 35px;
+
+        > a { padding: 0 10px; line-height: 35px; color: $white; }
+        &.active > a, &.active > a:focus {
+          padding: 0 10px;
+          color: $black;
+          background-color: lighten($white, 10);
+        }
+      }
+    }
+  }
+}

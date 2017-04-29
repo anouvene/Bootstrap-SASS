@@ -1,0 +1,13 @@
+.actu {
+  text-align: left;
+
+  h2 {
+    @extend .title-h3;
+  }
+  .actu-date {margin-bottom: 10px;}
+  .actu-details {
+    padding: 10px;
+    border: dotted 1px $black;
+  }
+
+}

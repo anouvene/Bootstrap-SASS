@@ -1,0 +1,113 @@
+html, body {  height: 100%;  }
+
+body {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container-fluid {
+  box-sizing: content-box;
+  padding: 0;
+  height: 100%;
+  @include clearfix;
+}
+  .main-content {
+    @include clearfix;
+    width: 100%;
+    min-height: 100%;
+    margin-bottom: 20px;
+  }
+
+ul {
+  list-style: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {  margin: 0;  }
+
+.title-h3 {
+  margin-bottom: 25px;
+  font-size: map_get($heading-font-size, h3);
+  text-align: center;
+  font-weight: bold;
+}
+
+.clear {  clear: both;  }
+.row {  margin: 0;  }
+
+@media only screen and (max-width: 768px) {
+  /* @container-fluid
+  ------------*/
+  .container-fluid {
+    height: auto;
+    overflow: hidden;
+  }
+
+  /* @characters
+  ------------*/
+  /* @characters
+  ------------*/
+  .characters {
+    .characters-desc {
+      text-align: center;
+
+      p, h3{ text-align: left}
+      .btn {display: inline-block}
+    }
+  }
+
+  /* @header
+  ------------*/
+  .navbar,  .navbar-default {
+    height: auto;
+    .container-fluid {
+      margin-left: 0;
+      background-color: $brown;
+      border-radius: 0;
+      text-align: center;
+      color: $white;
+
+      .navbar-collapse {
+        border-top: none;
+        box-shadow: none;
+      }
+
+      /* @menu
+      ------------*/
+      .navbar-nav {
+        li {
+          float: none;
+          display: block;
+          height: 35px;
+
+          > a { padding: 0 10px; line-height: 35px; color: $white; }
+          .active > a, .active > a:focus {
+            padding: 0;
+            color: $black;
+            background-color: lighten($white, 10);
+          }
+        }
+      }
+    }
+  }
+
+  /* @menu
+  ------------*/
+  .actu, .rank {
+    padding-bottom: 30px;
+  }
+
+  /* @misc
+  ------------*/
+  .misc {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+
+    /* @footer
+    ------------*/
+  footer {
+    @include container-fixed(10%);
+  }
+
+}

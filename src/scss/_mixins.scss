@@ -1,0 +1,53 @@
+@mixin row {
+  @include make-row();
+  @include clearfix;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+@mixin paragraph-bold {
+  padding-bottom: 60px;
+}
+
+@mixin paragraph-lighten {
+  padding-bottom: 30px;
+  color: #818181;
+}
+
+@mixin clearfix {
+  &:before, &:after {
+    display: table;
+    content: ' ';
+    *zoom: 1;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@mixin title-h2 {
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  border-bottom: solid 1px $grey-lighten;
+}
+
+// Toggle
+@mixin navbar-toggle-rotate($deg, $y) {
+  @-webkit-keyframes kf-rotate {
+    0% {opacity: 0; }
+    50% {opacity: 0.2; transform: rotate($deg);}
+    100% {opacity: 1; transform: translate(0,$y) rotate($deg); transition: all 1s ease; }
+  }
+
+  @keyframes kf-rotate {
+    0% {opacity: 0; }
+    50% {opacity: 0.2; transform: rotate($deg);}
+    100% {opacity: 1; transform: translate(0,$y) rotate($deg); transition: all 1s ease; }
+  }
+
+  -webkit-animation: kf-rotate 1s linear forwards;
+  animation: kf-rotate 1s linear forwards;
+
+}

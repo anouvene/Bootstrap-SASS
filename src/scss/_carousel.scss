@@ -1,0 +1,35 @@
+#myCarousel {
+  @include clearfix;
+  min-height: 330px;
+  background-color: $grey-lighten;
+  text-align: center;
+
+  h3 {
+    @include title-h3;
+    position: absolute;
+
+    width: 100%;
+    z-index: 50;
+
+  }
+  .carousel-inner {
+    .item {
+
+      height: 330px;
+      .item-content {
+        width : 100%;
+        height: 100%;
+        display: table;
+        text-align: center;
+        .item-txt {
+          display: table-cell;
+
+          vertical-align: middle;
+        }
+
+      }
+
+      img {width: 100%}
+    }
+  }
+}

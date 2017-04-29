@@ -1,0 +1,50 @@
+$white:   #FFF;
+$black:   #303030;
+$black-lighten-soft: lighten($black, 20);
+$black-lighten: lighten($black, 10);
+$grey: #818181;
+$grey-lighten : #f6f6f6;
+$blue: #0EA2E0;
+
+$brown: #95714D;
+$mauve : #95724C;
+
+
+$bg-color: $black;
+$nav-bg-color: $brown;
+
+$text-color: $grey;
+$paragraph-font-size: 1.2em;
+$paragraph-font-family: 'Open Sans', sans-serif;
+
+$menu-anchor-font-size: 1.4em;
+$menu-anchor-color: $grey;
+$menu-anchor-hover-color: lighten($black, 30);
+
+$heading-color: $grey;
+$heading-font-family: 'Bitter', serif;
+$heading-font-weight: 700;
+$heading-font-size: (
+  h1: 40px,
+  h2: 36px,
+  h3: 16px,
+  h4: 28px,
+  h5: 24px,
+  h6: 20px
+);
+
+// panel
+$border: solid 1px $black;
+$heading-text-color: $grey;
+$heading-bg-color: white;
+$heading-border: white;
+
+
+
+// button
+$btn-font-size: 16px;
+$btn-font-weight: bold;
+
+// footer
+$footer-color: $white;
+$footer-bg-color: $white;

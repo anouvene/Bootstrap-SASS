@@ -1,0 +1,26 @@
+.characters {
+  @include row;
+  padding: 15px;
+
+  .panel {
+    @extend .panel-default;
+    padding: 15px;
+  }
+
+  figure {
+    @include container-fixed(40%);
+    margin-bottom: 25px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .characters-desc {
+    padding: 0 15px;
+    h3 {
+      font-size: map_get($heading-font-size, h3);
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  }
+}

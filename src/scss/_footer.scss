@@ -1,0 +1,12 @@
+// @footer
+footer {
+  @include container-fixed(40%);
+  @include clearfix;
+  width: 100%;
+  background-color: $white;
+  text-align: center;
+  color: $grey;
+  a {
+    color: $blue;
+  }
+}
